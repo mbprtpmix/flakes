@@ -105,10 +105,10 @@
   ];
 
   nix = {
-    package = pkgs.nixUnstable;
-    extraOptions = ''
-      experimental-features = nix-command flakes ca-references
-    '';
+#    package = pkgs.nixUnstable;
+#    extraOptions = ''
+#      experimental-features = nix-command flakes ca-references
+#    '';
     useSandbox = true;
     autoOptimiseStore = true;
     gc = {
@@ -116,9 +116,6 @@
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
-  };
-
-  nix = {
     binaryCaches = [
       "https://cache.nixos.org"
       "https://cachix.cachix.org"
@@ -131,9 +128,8 @@
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       "mbpnix.cachix.org-1:nAfBijPdJRqcMhwDlIr4LbwPPKVWHROKx02Bcc/WbAI="
     ];
+    trustedUsers = [ "root" "mbpnix" ];
   };
-
-  nix.trustedUsers = [ "root" "mbpnix" ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
