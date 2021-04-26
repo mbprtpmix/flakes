@@ -11,7 +11,7 @@
     utils.url = "github:gytis-ivaskevicius/flake-utils-plus/staging";
   };
 
-  outputs = { self, nixpkgs, home-manager, utils, nur, }@inputs:
+  outputs = { self, nixpkgs, home-manager, utils, nur }@inputs:
     utils.lib.systemFlake {
       inherit self inputs;
 
