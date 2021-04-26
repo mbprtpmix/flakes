@@ -26,14 +26,13 @@
         nixos = {
           modules = [
             ./configuration.nix
-            # rust-nix-templater.nixosModules.rust-nix-templater
             home-manager.nixosModules.home-manager
             {
               home-manager.useUserPackages = true;
               home-manager.useGlobalPkgs = true;
             }
              ({ pkgs, ... }: {
-              home-manager.users.nix = import ./HM/home.nix;
+              home-manager.users.mbpnix = import ./hm/home.nix;
               environment.shellAliases = {
                 nix-repl = "nix repl ${inputs.utils.lib.repl}";
               };
