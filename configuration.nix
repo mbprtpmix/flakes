@@ -96,7 +96,12 @@
     extraGroups = [ "wheel" "networkmanager" "audio" "video" ]; # Enable ‘sudo’ for the user.
   };
   
-  programs.bash.enableCompletion = true;
+  programs.bash = {
+    enableCompletion = true;
+    shellInit = ''
+      bind "set completion-ignore-case on"
+    '';
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
