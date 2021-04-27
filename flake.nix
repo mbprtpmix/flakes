@@ -2,7 +2,7 @@
   description = "mbpnix";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     nur = {
       url = "github:nix-community/NUR";
@@ -11,12 +11,12 @@
     utils.url = "github:gytis-ivaskevicius/flake-utils-plus/staging";
   };
 
-  outputs = { self, nixpkgs, home-manager, utils, nur }@inputs:
+  outputs = { self, unstable, home-manager, utils, nur }@inputs:
     utils.lib.systemFlake {
       inherit self inputs;
 
       channels.nixpkgs = {
-         input = nixpkgs;
+         input = unstable;
          config = {
            allowUnfree = true;
         };
