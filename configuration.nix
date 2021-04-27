@@ -102,13 +102,18 @@
     interactiveShellInit = ''
       bind "set completion-ignore-case on"
     '';
+    shellAliases = {
+    x="xclip -selection c -i";      # Cut	(does not filter).
+    c="xclip -selection c -i -f";		# Copy	(does filter).
+    v="xclip -selection c -o";      # Paste.
+    };
   };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     arc-icon-theme arc-theme capitaine-cursors sweet
-    bleachbit firefox git git-crypt vim wget
+    bleachbit firefox git git-crypt vim wget xclip
     cached-nix-shell cachix nixops
   ];
 
