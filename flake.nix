@@ -17,23 +17,23 @@
       inherit self inputs;
 
       channels.nixpkgs = {
-         input = unstable;
-         config = {
-           allowUnfree = true;
+        input = unstable;
+        config = {
+          allowUnfree = true;
         };
       };
 
       channels.nixpkgs-stable = {
-         input = stable;
-         config = {
-           allowUnfree = true;
-           allowBroken = true;
+        input = stable;
+        config = {
+          allowUnfree = true;
+#         allowBroken = true;
         };
       };
 
       channels.nixpkgs.overlaysBuilder = channels: [
-#        (final: prev: { inherit (channels.nixpkgs-stable) nix-deploy; })
-         (final: prev: { inherit (channels) nixpkgs-stable; })
+#       (final: prev: { inherit (channels.nixpkgs-stable) nix-deploy; })
+        (final: prev: { inherit (channels) nixpkgs-stable; })
       ];
 
       hosts = {

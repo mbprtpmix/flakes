@@ -70,7 +70,7 @@
     userEmail = "mbpnix@pm.me";
     userName = "mbpnix";
     signing = {
-      key = "C40CE857";
+      key = "C24865FD";
       signByDefault = true;
     };
   };
