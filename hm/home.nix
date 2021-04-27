@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./modules/files.nix # files to link in ~
-  ];
+#  imports = [
+#    ./modules/files.nix # files to link in ~
+#  ];
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
@@ -15,10 +15,10 @@
   
   xdg.enable = true;
 
-  home.sessionPath = [
-    "${config.home.homeDirectory}/.local/bin"
-    "${config.home.homeDirectory}/.bin"
-  ];
+#  home.sessionPath = [
+#    "${config.home.homeDirectory}/.local/bin"
+#    "${config.home.homeDirectory}/.bin"
+#  ];
 
   home.sessionVariables = {
     EDITOR = "nvim";
