@@ -98,7 +98,8 @@
   
   programs.bash = {
     enableCompletion = true;
-    shellInit = ''
+    enableLsColors = true;
+    interactiveShellInit = ''
       bind "set completion-ignore-case on"
     '';
   };
