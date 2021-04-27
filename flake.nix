@@ -2,8 +2,8 @@
   description = "mbpnix";
 
   inputs = {
-    stable.url = "github:nixos/nixpkgs/nixos-20.09";
-    unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    stable.url = "github:NixOS/nixpkgs/nixos-20.09";
+    unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     nur = {
       url = "github:nix-community/NUR";

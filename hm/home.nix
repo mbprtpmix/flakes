@@ -134,6 +134,7 @@
     unrar
     unzip
     vimix-gtk-themes
+    vscodium
     vlc
     xarchiver
     xclip
