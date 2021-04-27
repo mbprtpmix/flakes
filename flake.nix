@@ -2,6 +2,7 @@
   description = "mbpnix";
 
   inputs = {
+    stable.url = "github:nixos/nixpkgs/nixos-20.09";
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     nur = {
@@ -11,7 +12,7 @@
     utils.url = "github:gytis-ivaskevicius/flake-utils-plus/staging";
   };
 
-  outputs = { self, unstable, home-manager, utils, nur }@inputs:
+  outputs = { self, stable, unstable, home-manager, utils, nur }@inputs:
     utils.lib.systemFlake {
       inherit self inputs;
 
