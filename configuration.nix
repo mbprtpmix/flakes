@@ -95,13 +95,15 @@
     description = "MBPNIX";
     extraGroups = [ "wheel" "networkmanager" "audio" "video" ]; # Enable ‘sudo’ for the user.
   };
+  
+  programs.bash.enableCompletion = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     arc-icon-theme arc-theme capitaine-cursors sweet
     bleachbit firefox git git-crypt vim wget
-    cached-nix-shell cachix nixops 
+    cached-nix-shell cachix nixops
   ];
 
   nix = {
