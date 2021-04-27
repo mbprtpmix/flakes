@@ -67,8 +67,8 @@
   # git
   programs.git = {
     enable = true;
-    userEmail = "mbpnix@pm.me";
-    userName = "mbpnix";
+    userEmail = "mbprtpmix@gmail.com";
+    userName = "mbprtpmix";
     signing = {
       key = "C24865FD";
       signByDefault = true;
