@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./modules/files.nix # files to link in ~
+  ];
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
@@ -9,9 +12,24 @@
     enable = true;
     gitProtocol = "ssh";
   };
+  
+  xdg.enable = true;
+
+  home.sessionPath = [
+    "${config.home.homeDirectory}/.local/bin"
+    "${config.home.homeDirectory}/.bin"
+  ];
 
   home.sessionVariables = {
     EDITOR = "nvim";
+  };
+  
+  gtk = {
+    enable = true;
+    iconTheme.name = "Arc";
+    iconTheme.package = pkgs.arc-icon-theme;
+    theme.name = "Sweet-Dark";
+    theme.package = pkgs.sweet;
   };
 
   # nvim
