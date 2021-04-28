@@ -27,12 +27,10 @@
         input = stable;
         config = {
           allowUnfree = true;
-#         allowBroken = true;
         };
       };
 
       channels.nixpkgs.overlaysBuilder = channels: [
-#       (final: prev: { inherit (channels.nixpkgs-stable) nix-deploy; })
         (final: prev: { inherit (channels) nixpkgs-stable; })
       ];
 
@@ -48,7 +46,8 @@
              ({ pkgs, ... }: {
               home-manager.users.mbpnix = import ./hm/home.nix;
               environment.shellAliases = {
-                nix-repl = "nix repl ${inputs.utils.lib.repl}";
+                ll = "exa --color=always --icons -al --group-directories-first";
+                ls = "exa --color=always --icons -l --group-directories-first";
               };
             })
           ];

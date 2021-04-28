@@ -56,13 +56,13 @@
   programs.password-store = {
     enable = true;
     package = pkgs.pass.withExtensions (exts: [ exts.pass-otp ]);
-    settings = { PASSWORD_STORE_DIR = "$HOME/.local/share/password-store"; };
+    settings = { PASSWORD_STORE_DIR = "~/.password-store"; };
   };
 
   # gpg
   programs.gpg = {
     enable = true;
-    settings = { homedir = "$HOME/.local/share/gnupg"; };
+    settings = { homedir = "~/.gnupg"; };
   };
 
   # gpg-agent
@@ -71,7 +71,10 @@
     enableSshSupport = true;
     defaultCacheTtl = 60;
     defaultCacheTtlSsh = 60;
+    maxCacheTtl = 60;
+    maxCacheTtlSsh = 60;
     pinentryFlavor = "gtk2";
+    sshKeys = [ "3E21A304C2321FD74847868EFFB8AE44A11963CA" ];
   };
 
   # git
@@ -81,7 +84,7 @@
     userEmail = "mbprtpmix@gmail.com";
     signing = {
       signByDefault = true;
-      key = "C24865FD";
+      key = "14E5A6EC";
     };
   };
 

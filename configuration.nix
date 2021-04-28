@@ -114,7 +114,7 @@
   environment.systemPackages = with pkgs; [
     arc-icon-theme arc-theme capitaine-cursors sweet
     bleachbit firefox git git-crypt vim wget xclip
-    cached-nix-shell cachix nixops
+    cached-nix-shell cachix
   ];
 
   nix = {
