@@ -112,16 +112,26 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    arc-icon-theme arc-theme capitaine-cursors sweet
-    bleachbit firefox git git-crypt vim wget xclip
-    cached-nix-shell cachix
+    arc-icon-theme
+    arc-theme
+    capitaine-cursors
+    sweet
+    bleachbit
+    firefox
+    git
+    git-crypt
+    vim
+    wget
+    xclip
+    cached-nix-shell
+    cachix
   ];
 
   nix = {
-#    package = pkgs.nixUnstable;
-#    extraOptions = ''
-#      experimental-features = nix-command flakes ca-references
-#    '';
+    # package = pkgs.nixUnstable;
+    # extraOptions = ''
+    #   experimental-features = nix-command flakes ca-references
+    # '';
     useSandbox = true;
     autoOptimiseStore = true;
     gc = {

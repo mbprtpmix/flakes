@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./modules/shell.nix
+    ./modules/files.nix
+  ];
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
