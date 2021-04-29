@@ -10,9 +10,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     utils.url = "github:gytis-ivaskevicius/flake-utils-plus/staging";
+    nix-doom-emacs.url = "github:vlaci/nix-doom-emacs";
   };
 
-  outputs = { self, stable, unstable, home-manager, utils, nur }@inputs:
+  outputs = { self, stable, unstable, nix-doom-emacs, home-manager, utils, nur }@inputs:
     utils.lib.systemFlake {
       inherit self inputs;
 
@@ -44,7 +45,7 @@
               home-manager.useGlobalPkgs = true;
             }
              ({ pkgs, ... }: {
-              home-manager.users.mbpnix = import ./hm/home.nix;
+              home-manager.users.mbpnix = { ... }: { imports = [ nix-doom-emacs.hmModule ./hm/home.nix ]; };
               environment.shellAliases = {
                 ll = "exa --color=always --icons -al --group-directories-first";
                 ls = "exa --color=always --icons -l --group-directories-first";

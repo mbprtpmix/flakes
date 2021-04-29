@@ -9,18 +9,23 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  programs.doom-emacs = {
+    enable = true;
+    doomPrivateDir = ./doom.d;
+  };
+
   # gh
   programs.gh = {
     enable = true;
     gitProtocol = "ssh";
   };
-  
+
   xdg.enable = true;
 
   home.sessionVariables = {
     EDITOR = "nvim";
   };
-  
+
   gtk = {
     enable = true;
     iconTheme.name = "Arc";
@@ -49,7 +54,7 @@
       set colorcolumn=80
       highlight ColorColumn ctermbg=0 guibg=lightgrey
       colorscheme gruvbox
-      set background=dark 
+      set background=dark
     '';
     plugins = [
       pkgs.vimPlugins.vim-nix
