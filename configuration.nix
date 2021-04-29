@@ -93,7 +93,7 @@
     uid = 1000;
     hashedPassword = "$6$vAnCJagYjSels0M$hmd87xvjT2QW2Wa2PAt5SI/yomr/pUgXEVe3Rx1SvHBxMDRlE5gmydhaMzUzPeWR9bpiB.6MYfGlpxZYc1MYc0";
     description = "MBPNIX";
-    extraGroups = [ "wheel" "networkmanager" "audio" "video" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "audio" "video" "docker" ]; # Enable ‘sudo’ for the user.
   };
   
   programs.bash = {
@@ -126,6 +126,12 @@
     cached-nix-shell
     cachix
   ];
+
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
+    storageDriver = "overlay2";
+  };
 
   nix = {
     # package = pkgs.nixUnstable;
