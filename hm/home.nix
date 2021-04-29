@@ -14,6 +14,10 @@
     doomPrivateDir = ./doom.d;
   };
 
+  services.emacs = {
+    enable = true;
+  };
+
   # gh
   programs.gh = {
     enable = true;

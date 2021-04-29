@@ -3,6 +3,7 @@
 {
   fonts = {
     fonts = with pkgs; [
+      fira-code
       (nerdfonts.override { fonts = [ "IBMPlexMono" "JetBrainsMono" ]; })
       terminus-nerdfont
       terminus_font
