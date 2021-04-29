@@ -157,6 +157,8 @@
     numix-sx-gtk-theme
     obs-studio
     orchis
+    gimp
+    inkscape
     p7zip
     pinentry-gtk2
     papirus-icon-theme
