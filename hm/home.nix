@@ -131,6 +131,8 @@
     i3lock-fancy
     keepassxc
     kotatogram-desktop
+    vscodium
+    atom
     lsd
     neofetch
     nettools
@@ -138,10 +140,17 @@
     nordic
     numix-gtk-theme
     numix-solarized-gtk-theme
+    numix-cursor-theme
+    numix-icon-theme
+    numix-icon-theme-circle
+    numix-icon-theme-square
+    numix-solarized-gtk-theme
+    numix-sx-gtk-theme
     obs-studio
     orchis
     p7zip
     pinentry-gtk2
+    papirus-icon-theme
     procs
     ripgrep
     scrot
@@ -152,7 +161,6 @@
     unrar
     unzip
     vimix-gtk-themes
-    vscodium
     vlc
     xarchiver
     xclip
