@@ -101,6 +101,9 @@
     extraConfig = {
       core.editor = "vim";
       github.username = "mbprtpmix";
+      color.ui = true;
+      pull.rebase = true;
+      diff.algorithm = "patience";
     };
   };
 
