@@ -64,7 +64,12 @@
   services.xserver.displayManager.lightdm.greeters.gtk.extraConfig = ''
     font-name = Unifont 12
   '';
-  
+
+  programs.zsh = {
+    enable = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+  };
 
   # Configure keymap in X11
   services.xserver.layout = "gb";
@@ -105,6 +110,7 @@
     hashedPassword = "$6$vAnCJagYjSels0M$hmd87xvjT2QW2Wa2PAt5SI/yomr/pUgXEVe3Rx1SvHBxMDRlE5gmydhaMzUzPeWR9bpiB.6MYfGlpxZYc1MYc0";
     description = "MBPNIX";
     extraGroups = [ "wheel" "networkmanager" "audio" "video" "docker" ]; # Enable ‘sudo’ for the user.
+    shell = pkgs.zsh;
   };
   
   programs.qt5ct.enable = true;

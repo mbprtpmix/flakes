@@ -4,6 +4,7 @@
   imports = [
     ./modules/shell.nix
     ./modules/files.nix
+    ./modules/zsh.nix
   ];
 
   # Let Home Manager install and manage itself.
