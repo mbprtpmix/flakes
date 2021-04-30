@@ -26,10 +26,6 @@
 
   xdg.enable = true;
 
-  home.sessionVariables = {
-    EDITOR = "vim";
-  };
-
   gtk = {
     enable = true;
     iconTheme.name = "Arc";
