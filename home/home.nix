@@ -27,7 +27,7 @@
   xdg.enable = true;
 
   home.sessionVariables = {
-    EDITOR = "nvim";
+    EDITOR = "vim";
   };
 
   gtk = {
@@ -100,6 +100,10 @@
     signing = {
       signByDefault = true;
       key = "14E5A6EC";
+    };
+    extraConfig = {
+      core.editor = "vim";
+      github.username = "mbprtpmix";
     };
   };
 
