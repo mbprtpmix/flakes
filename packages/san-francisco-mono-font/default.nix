@@ -1,4 +1,4 @@
-{ stdenv, fetchurl }:
+{ stdenv, lib, fetchurl }:
 
 # https://github.com/ZulwiyozaPutra/SF-Mono-Font
 
