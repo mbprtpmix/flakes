@@ -5,12 +5,12 @@
     stable.url = "github:NixOS/nixpkgs/nixos-20.09";
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
+    utils.url = "github:gytis-ivaskevicius/flake-utils-plus/staging";
+    nix-doom-emacs.url = "github:vlaci/nix-doom-emacs";
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    utils.url = "github:gytis-ivaskevicius/flake-utils-plus/staging";
-    nix-doom-emacs.url = "github:vlaci/nix-doom-emacs";
   };
 
   outputs = { self, stable, unstable, nix-doom-emacs, home-manager, utils, nur }@inputs:
@@ -47,6 +47,7 @@
              ({ pkgs, ... }: {
               home-manager.users.mbpnix = { ... }: { imports = [ nix-doom-emacs.hmModule ./home/home.nix ]; };
               environment.shellAliases = {
+                nix-repl = "nix repl ${inputs.utils.lib.repl}";
                 ll = "exa --color=always --icons -al --group-directories-first";
                 ls = "exa --color=always --icons -l --group-directories-first";
               };
