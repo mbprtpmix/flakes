@@ -42,6 +42,7 @@
   programs.neovim = {
     enable = true;
     vimAlias = true;
+    viAlias = true;
     extraConfig = ''
       syntax on
       set tabstop=2 softtabstop=2
@@ -156,6 +157,7 @@
     numix-solarized-gtk-theme
     numix-sx-gtk-theme
     obs-studio
+    pavucontrol
     orchis
     gimp
     inkscape
