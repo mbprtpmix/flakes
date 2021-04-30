@@ -64,6 +64,10 @@
   services.xserver.displayManager.lightdm.greeters.gtk.extraConfig = ''
     font-name = Unifont 12
   '';
+  
+  nixpkgs.overlays = [
+    (import ../overlays/packages.nix)
+  ];
 
   programs.zsh = {
     enable = true;
