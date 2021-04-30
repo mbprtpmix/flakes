@@ -45,7 +45,7 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  services.xserver.videoDrivers = [ "intel" ];
+  services.xserver.videoDrivers = [ "intel" "ati" "amdgpu" ];
 
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.xfce.enable = true;
@@ -80,8 +80,13 @@
   
   services.pipewire = {
     enable = true;
-    pulse.enable = true;
-    alsa.enable = true;
+    pulse = {
+      enable = true;
+    };
+    alsa = {
+      enable = true;
+      support32Bit = true;
+    };
   };
 
   hardware.cpu.intel.updateMicrocode = true;
@@ -101,6 +106,8 @@
     description = "MBPNIX";
     extraGroups = [ "wheel" "networkmanager" "audio" "video" "docker" ]; # Enable ‘sudo’ for the user.
   };
+  
+  programs.qt5ct.enable = true;
   
   programs.bash = {
     enableCompletion = true;

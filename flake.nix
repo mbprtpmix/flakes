@@ -38,14 +38,14 @@
       hosts = {
         nixos = {
           modules = [
-            ./configuration.nix
+            ./system/configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager.useUserPackages = true;
               home-manager.useGlobalPkgs = true;
             }
              ({ pkgs, ... }: {
-              home-manager.users.mbpnix = { ... }: { imports = [ nix-doom-emacs.hmModule ./hm/home.nix ]; };
+              home-manager.users.mbpnix = { ... }: { imports = [ nix-doom-emacs.hmModule ./home/home.nix ]; };
               environment.shellAliases = {
                 ll = "exa --color=always --icons -al --group-directories-first";
                 ls = "exa --color=always --icons -l --group-directories-first";
