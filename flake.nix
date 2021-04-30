@@ -58,7 +58,10 @@
 
       sharedOverlays = [
         nur.overlay
+        self.overlay
       ];
+
+      overlay = import ./overlays/packages.nix;
 
       hostDefaults.modules = [ utils.nixosModules.saneFlakeDefaults ];
     };
