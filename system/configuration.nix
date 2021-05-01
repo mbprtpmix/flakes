@@ -96,6 +96,9 @@
       enable = true;
       support32Bit = true;
     };
+    jack = {
+      enable = true;
+    };
   };
 
   hardware.cpu.intel.updateMicrocode = true;
@@ -149,6 +152,8 @@
     cached-nix-shell
     cachix
   ];
+  
+  environment.shells = [ pkgs.zsh ];
 
   virtualisation.docker = {
     enable = true;
