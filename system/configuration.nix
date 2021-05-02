@@ -20,6 +20,7 @@
     efiSupport = true;
     version = 2;
     devices = [ "nodev" ];
+    splashImage = null;
   };
 
   networking.hostName = "nixos"; # Define your hostname.

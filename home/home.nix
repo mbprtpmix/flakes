@@ -165,7 +165,6 @@
     obs-studio
     pavucontrol
     orchis
-    gimp
     inkscape
     p7zip
     pinentry-gtk2

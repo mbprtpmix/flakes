@@ -9,6 +9,7 @@
       (nerdfonts.override { fonts = [ "IBMPlexMono" "JetBrainsMono" ]; })
       terminus-nerdfont
       terminus_font
+      mononoki
       iosevka
       unifont
     ];
