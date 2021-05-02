@@ -78,6 +78,7 @@
         "github.com" = {
           user = "git";
           identityFile = "${home}/.ssh/key.pub";
+          identitiesOnly = true;
         };
       };
   };
