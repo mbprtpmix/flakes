@@ -66,6 +66,22 @@
     ];
   };
 
+  # ssh
+  programs.ssh = {
+    enable = true;
+    compression = true;
+    matchBlocks =
+      let
+        home = config.home.homeDirectory;
+      in
+      {
+        "github.com" = {
+          user = "git";
+          identityFile = "${home}/.ssh/key.pub";
+        };
+      };
+  };
+
   # pass
   programs.password-store = {
     enable = true;
