@@ -62,6 +62,7 @@
     plugins = [
       pkgs.vimPlugins.vim-nix
       pkgs.vimPlugins.gruvbox
+      pkgs.vimPlugins.gruvbox
     ];
   };
 
