@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./modules/alacritty.nix
     ./modules/shell.nix
     ./modules/files.nix
     ./modules/zsh.nix
@@ -87,13 +88,13 @@
   programs.password-store = {
     enable = true;
     package = pkgs.pass.withExtensions (exts: [ exts.pass-otp ]);
-    settings = { PASSWORD_STORE_DIR = "~/.password-store"; };
+    settings = { PASSWORD_STORE_DIR = ".password-store"; };
   };
 
   # gpg
   programs.gpg = {
     enable = true;
-    settings = { homedir = "~/.gnupg"; };
+    settings = { homedir = ".gnupg"; };
   };
 
   # gpg-agent
