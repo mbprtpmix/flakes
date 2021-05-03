@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "mbpnix"
-      user-mail-address "mbpnix@pm.me")
+(setq user-full-name "mbprtpmix"
+      user-mail-address "mbprtpmix@gmail.com")
       
 (setq doom-font (font-spec :family "Unifont" :size 15)
       doom-variable-pitch-font (font-spec :family "Unifont" :size 15)
