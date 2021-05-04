@@ -83,6 +83,8 @@
     syntaxHighlighting.enable = true;
   };
 
+  programs.adb.enable = true;
+
   # Configure keymap in X11
   services.xserver.layout = "gb";
   services.xserver.xkbOptions = "eurosign:e";
