@@ -19,7 +19,7 @@
         y = 0;
       };
       scrolling.history = 10000;
-      font = let font = "Unifont";
+      font = let font = "Iosevka Term SS08";
       in {
         normal.family = font;
         bold.family = font;
